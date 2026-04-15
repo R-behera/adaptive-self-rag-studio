@@ -1,0 +1,114 @@
+{
+  "slug": "adaptive-self-rag-studio",
+  "title": "Adaptive Self-RAG Studio",
+  "project_type": "rag",
+  "domain": "Enterprise RAG",
+  "summary": "Build a production-facing RAG system that decides when to retrieve, critiques answer quality, and exposes grounded response traces for operators.",
+  "tags": [
+    "rag",
+    "self-rag",
+    "llm",
+    "enterprise"
+  ],
+  "accent": "#2c31c8",
+  "secondary_accent": "#2c3da9",
+  "dashboard_metrics": [
+    {
+      "label": "Grounded Recall",
+      "value": "78%",
+      "delta": "+4.6%"
+    },
+    {
+      "label": "Citation Coverage",
+      "value": "87%",
+      "delta": "+3.1%"
+    },
+    {
+      "label": "Latency",
+      "value": "170ms",
+      "delta": "-18ms"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "leadership"
+  },
+  "sample_metrics": {
+    "acquisition": 50.0,
+    "activation": 47.0,
+    "retention": 58.0,
+    "revenue": 97.0
+  },
+  "knowledge_base": [
+    "Adaptive Self-RAG Studio is positioned as a Enterprise RAG starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Build a production-facing RAG system that decides when to retrieve, critiques answer quality, and exposes grounded response traces for operators.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on rag, self-rag, llm, enterprise.",
+    "Source paper: Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "Official repo: https://github.com/AkariAsai/self-rag",
+    "Production differentiation focus: Expose retrieval decisions and critique traces through an operator-facing API.; Add simple policy controls so retrieval can be forced on regulated or high-risk queries.; Package answer quality checks and screenshots for portfolio-ready demos."
+  ],
+  "research_key": "self-rag",
+  "research_score": 9.79,
+  "paper_title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+  "paper_url": "https://openreview.net/forum?id=hSyW5go0v8",
+  "repo_url": "https://github.com/AkariAsai/self-rag",
+  "repo_org": "AkariAsai",
+  "why_high_score": [
+    "Strong paper quality with clear production implications for adaptive retrieval.",
+    "Official open-source implementation exists and is widely used in advanced RAG discussions.",
+    "High differentiation potential versus generic chat-over-docs projects."
+  ],
+  "differentiation_hooks": [
+    "Expose retrieval decisions and critique traces through an operator-facing API.",
+    "Add simple policy controls so retrieval can be forced on regulated or high-risk queries.",
+    "Package answer quality checks and screenshots for portfolio-ready demos."
+  ],
+  "app_archetype": "navigator",
+  "ui_profile": {
+    "layout": "stack",
+    "surface": "ink",
+    "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif",
+    "radius": 28,
+    "shadow": 48,
+    "eyebrow_style": "outline",
+    "module_columns": 2,
+    "hero_align": "split",
+    "headline_mode": "compact"
+  },
+  "app_modules": [
+    {
+      "label": "Query 01",
+      "title": "Grounded Question",
+      "description": "Ask a domain question and retrieve the most relevant context from the local knowledge base.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Search Context",
+      "prefill": "What is the top priority recommendation for Adaptive Self-RAG Studio?",
+      "hint": "Grounded answer and supporting contexts will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Query 02",
+      "title": "Retrieval Quality Review",
+      "description": "Compare retrieval-side metrics against a baseline before changing prompt or chunking strategy.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Review Quality",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 50.0,\n    \"activation\": 47.0,\n    \"retention\": 58.0,\n    \"revenue\": 97.0\n  },\n  \"baseline\": {\n    \"acquisition\": 46.0,\n    \"activation\": 43.24,\n    \"retention\": 53.36,\n    \"revenue\": 89.24\n  }\n}",
+      "hint": "Quality delta summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Query 03",
+      "title": "Response Playbook",
+      "description": "Generate a recommended follow-up workflow grounded in the project context.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Build Response",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Adaptive Self-RAG Studio.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 50.0,\n    \"activation\": 47.0,\n    \"retention\": 58.0,\n    \"revenue\": 97.0\n  }\n}",
+      "hint": "Recommended workflow steps will appear here.",
+      "span": "normal"
+    }
+  ]
+}

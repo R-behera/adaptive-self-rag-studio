@@ -1,0 +1,15 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-self-rag-studio"
+version = "0.1.0"
+description = "Build a production-facing RAG system that decides when to retrieve, critiques answer quality, and exposes grounded response traces for operators."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
