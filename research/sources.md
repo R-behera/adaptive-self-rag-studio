@@ -17,3 +17,10 @@
         - Strong paper quality with clear production implications for adaptive retrieval.
 - Official open-source implementation exists and is widely used in advanced RAG discussions.
 - High differentiation potential versus generic chat-over-docs projects.
+
+        ## Upstream checkout
+
+- Source repo: https://github.com/AkariAsai/self-rag
+- Local clone: /Users/Rb/Documents/LLM based projects /sources/AkariAsai__self-rag
+- Branch: main
+- Commit: 1fcdc420e48f50a7d7ab1ece5494221b93252e99

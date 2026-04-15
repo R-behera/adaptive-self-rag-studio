@@ -1,0 +1,75 @@
+{
+  "upstream": {
+    "owner": "AkariAsai",
+    "repo": "self-rag",
+    "source_url": "https://github.com/AkariAsai/self-rag",
+    "local_path": "/Users/Rb/Documents/LLM based projects /sources/AkariAsai__self-rag",
+    "branch": "main",
+    "default_branch": "main",
+    "commit": "1fcdc420e48f50a7d7ab1ece5494221b93252e99",
+    "fork_requested": true,
+    "fork_result": "https://github.com/R-behera/self-rag"
+  },
+  "audit": {
+    "file_count": 52,
+    "text_file_count": 49,
+    "top_suffixes": [
+      [
+        ".py",
+        40
+      ],
+      [
+        ".sh",
+        4
+      ],
+      [
+        ".md",
+        3
+      ],
+      [
+        ".conf",
+        1
+      ],
+      [
+        ".png",
+        1
+      ],
+      [
+        ".txt",
+        1
+      ],
+      [
+        ".yml",
+        1
+      ],
+      [
+        "<none>",
+        1
+      ]
+    ],
+    "style_counts": {
+      "other": 19,
+      "PascalCase": 4,
+      "snake_case": 29
+    },
+    "token_hits": {},
+    "findings": [
+      "No dedicated docs directory detected for architecture or operations guidance.",
+      "No obvious tests directory or test files detected.",
+      "No GitHub Actions workflow detected for repeatable checks.",
+      "No container packaging signal detected, which makes demos and deployment less portable.",
+      "Mixed filename conventions detected: PascalCase, snake_case.",
+      "Large files that may benefit from decomposition: retrieval_lm/finetune.py (726 lines)."
+    ],
+    "strengths": [
+      "Repository has a top-level README."
+    ],
+    "largest_files": [
+      "retrieval_lm/finetune.py (726 lines)"
+    ],
+    "has_tests": false,
+    "has_docs": false,
+    "has_ci": false,
+    "has_docker": false
+  }
+}

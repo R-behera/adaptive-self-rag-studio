@@ -5,6 +5,8 @@ Today I shipped **Adaptive Self-RAG Studio**, a research-backed Enterprise RAG p
 2. Add simple policy controls so retrieval can be forced on regulated or high-risk queries.
 3. Package answer quality checks and screenshots for portfolio-ready demos.
 
+I also reviewed the upstream repo and focused on gaps like: No dedicated docs directory detected for architecture or operations guidance.
+
         Why it matters:
         - easier to demo
         - easier to operate

@@ -12,6 +12,13 @@
 - Add simple policy controls so retrieval can be forced on regulated or high-risk queries.
 - Package answer quality checks and screenshots for portfolio-ready demos.
 
+        ## What the upstream code showed
+
+        - No dedicated docs directory detected for architecture or operations guidance.
+- No obvious tests directory or test files detected.
+- No GitHub Actions workflow detected for repeatable checks.
+- No container packaging signal detected, which makes demos and deployment less portable.
+
         ## Why the difference matters
 
         - It makes the original idea easier to explain to operators, hiring managers, and stakeholders.

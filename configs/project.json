@@ -15,29 +15,29 @@
   "dashboard_metrics": [
     {
       "label": "Grounded Recall",
-      "value": "78%",
+      "value": "79%",
       "delta": "+4.6%"
     },
     {
       "label": "Citation Coverage",
-      "value": "87%",
+      "value": "88%",
       "delta": "+3.1%"
     },
     {
       "label": "Latency",
-      "value": "170ms",
+      "value": "171ms",
       "delta": "-18ms"
     }
   ],
   "sample_features": {
     "query": "Summarize the highest priority risk and recommended next step.",
-    "audience": "leadership"
+    "audience": "ops"
   },
   "sample_metrics": {
-    "acquisition": 50.0,
-    "activation": 47.0,
-    "retention": 58.0,
-    "revenue": 97.0
+    "acquisition": 50.7,
+    "activation": 47.5,
+    "retention": 58.4,
+    "revenue": 97.9
   },
   "knowledge_base": [
     "Adaptive Self-RAG Studio is positioned as a Enterprise RAG starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
@@ -72,7 +72,7 @@
     "radius": 28,
     "shadow": 48,
     "eyebrow_style": "outline",
-    "module_columns": 2,
+    "module_columns": 3,
     "hero_align": "split",
     "headline_mode": "compact"
   },
@@ -95,7 +95,7 @@
       "endpoint": "/analyze",
       "input_mode": "json",
       "cta": "Review Quality",
-      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 50.0,\n    \"activation\": 47.0,\n    \"retention\": 58.0,\n    \"revenue\": 97.0\n  },\n  \"baseline\": {\n    \"acquisition\": 46.0,\n    \"activation\": 43.24,\n    \"retention\": 53.36,\n    \"revenue\": 89.24\n  }\n}",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 50.7,\n    \"activation\": 47.5,\n    \"retention\": 58.4,\n    \"revenue\": 97.9\n  },\n  \"baseline\": {\n    \"acquisition\": 46.64,\n    \"activation\": 43.7,\n    \"retention\": 53.73,\n    \"revenue\": 90.07\n  }\n}",
       "hint": "Quality delta summary will appear here.",
       "span": "normal"
     },
@@ -106,7 +106,7 @@
       "endpoint": "/recommend",
       "input_mode": "json",
       "cta": "Build Response",
-      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Adaptive Self-RAG Studio.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 50.0,\n    \"activation\": 47.0,\n    \"retention\": 58.0,\n    \"revenue\": 97.0\n  }\n}",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Adaptive Self-RAG Studio.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"ops\"\n  },\n  \"metrics\": {\n    \"acquisition\": 50.7,\n    \"activation\": 47.5,\n    \"retention\": 58.4,\n    \"revenue\": 97.9\n  }\n}",
       "hint": "Recommended workflow steps will appear here.",
       "span": "normal"
     }
