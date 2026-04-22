@@ -1,103 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Adaptive Self-RAG Studio</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-ink">
-          <div class="page layout-stack eyebrow-outline headline-compact modules-3 hero-align-split">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Grounded Navigator</span>
-                <h1 id="project-title">Adaptive Self-RAG Studio</h1>
-                <p id="project-summary" class="lead">Build a production-facing RAG system that decides when to retrieve, critiques answer quality, and exposes grounded response traces for operators.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>rag</li><li>self-rag</li><li>llm</li><li>enterprise</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Grounded Recall</span><strong>79%</strong><em>+4.6%</em></article>
-<article class='card'><span>Citation Coverage</span><strong>88%</strong><em>+3.1%</em></article>
-<article class='card'><span>Latency</span><strong>171ms</strong><em>-18ms</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>RAG</strong></article><article class='mini-card'><span>Domain</span><strong>Enterprise RAG</strong></article><article class='mini-card'><span>Application</span><strong>Grounded Navigator</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-wide">
-  <div class="module-header">
-    <span>Query 01</span>
-    <h2>Grounded Question</h2>
-    <p>Ask a domain question and retrieve the most relevant context from the local knowledge base.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptive Self-RAG Studio App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Enterprise retrieval and AI</span>
+        <h1>Adaptive Self-RAG Studio</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">knowledge operations lead</div>
+        <div class="pill">orbital-grid</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
   </div>
-  <textarea class="js-input module-input-text">What is the top priority recommendation for Adaptive Self-RAG Studio?</textarea>
-  <div class="button-row">
-    <button class="js-run" data-endpoint="/query" data-input-mode="text">Search Context</button>
-  </div>
-  <pre class="js-output">Grounded answer and supporting contexts will appear here.</pre>
-</article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Query 02</span>
-            <h2>Retrieval Quality Review</h2>
-            <p>Compare retrieval-side metrics against a baseline before changing prompt or chunking strategy.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 50.7,
-    &quot;activation&quot;: 47.5,
-    &quot;retention&quot;: 58.4,
-    &quot;revenue&quot;: 97.9
-  },
-  &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 46.64,
-    &quot;activation&quot;: 43.7,
-    &quot;retention&quot;: 53.73,
-    &quot;revenue&quot;: 90.07
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Review Quality</button>
-          </div>
-          <pre class="js-output">Quality delta summary will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Query 03</span>
-            <h2>Response Playbook</h2>
-            <p>Generate a recommended follow-up workflow grounded in the project context.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for Adaptive Self-RAG Studio.&quot;,
-  &quot;features&quot;: {
-    &quot;query&quot;: &quot;Summarize the highest priority risk and recommended next step.&quot;,
-    &quot;audience&quot;: &quot;ops&quot;
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 50.7,
-    &quot;activation&quot;: 47.5,
-    &quot;retention&quot;: 58.4,
-    &quot;revenue&quot;: 97.9
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Build Response</button>
-          </div>
-          <pre class="js-output">Recommended workflow steps will appear here.</pre>
-        </article>
-            </section>
-            <footer class="footer">
-              <span>Enterprise RAG • RAG • Grounded Navigator</span>
-              <span>adaptive-self-rag-studio</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "adaptive-self-rag-studio", "title": "Adaptive Self-RAG Studio", "project_type": "rag", "domain": "Enterprise RAG", "summary": "Build a production-facing RAG system that decides when to retrieve, critiques answer quality, and exposes grounded response traces for operators.", "tags": ["rag", "self-rag", "llm", "enterprise"]}, "app_archetype": "navigator", "ui_profile": {"layout": "stack", "surface": "ink", "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif", "radius": 28, "shadow": 48, "eyebrow_style": "outline", "module_columns": 3, "hero_align": "split", "headline_mode": "compact"}, "app_modules": [{"label": "Query 01", "title": "Grounded Question", "description": "Ask a domain question and retrieve the most relevant context from the local knowledge base.", "endpoint": "/query", "input_mode": "text", "cta": "Search Context", "prefill": "What is the top priority recommendation for Adaptive Self-RAG Studio?", "hint": "Grounded answer and supporting contexts will appear here.", "span": "wide"}, {"label": "Query 02", "title": "Retrieval Quality Review", "description": "Compare retrieval-side metrics against a baseline before changing prompt or chunking strategy.", "endpoint": "/analyze", "input_mode": "json", "cta": "Review Quality", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 50.7,\n    \"activation\": 47.5,\n    \"retention\": 58.4,\n    \"revenue\": 97.9\n  },\n  \"baseline\": {\n    \"acquisition\": 46.64,\n    \"activation\": 43.7,\n    \"retention\": 53.73,\n    \"revenue\": 90.07\n  }\n}", "hint": "Quality delta summary will appear here.", "span": "normal"}, {"label": "Query 03", "title": "Response Playbook", "description": "Generate a recommended follow-up workflow grounded in the project context.", "endpoint": "/recommend", "input_mode": "json", "cta": "Build Response", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Adaptive Self-RAG Studio.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"ops\"\n  },\n  \"metrics\": {\n    \"acquisition\": 50.7,\n    \"activation\": 47.5,\n    \"retention\": 58.4,\n    \"revenue\": 97.9\n  }\n}", "hint": "Recommended workflow steps will appear here.", "span": "normal"}], "sample_features": {"query": "Summarize the highest priority risk and recommended next step.", "audience": "ops"}, "sample_metrics": {"acquisition": 50.7, "activation": 47.5, "retention": 58.4, "revenue": 97.9}, "knowledge_base": ["Adaptive Self-RAG Studio is positioned as a Enterprise RAG starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Build a production-facing RAG system that decides when to retrieve, critiques answer quality, and exposes grounded response traces for operators.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on rag, self-rag, llm, enterprise.", "Source paper: Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection", "Official repo: https://github.com/AkariAsai/self-rag", "Production differentiation focus: Expose retrieval decisions and critique traces through an operator-facing API.; Add simple policy controls so retrieval can be forced on regulated or high-risk queries.; Package answer quality checks and screenshots for portfolio-ready demos."], "dashboard_metrics": [{"label": "Grounded Recall", "value": "79%", "delta": "+4.6%"}, {"label": "Citation Coverage", "value": "88%", "delta": "+3.1%"}, {"label": "Latency", "value": "171ms", "delta": "-18ms"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+  <script>window.PROJECT_MANIFEST = {"slug": "adaptive-self-rag-studio", "title": "Adaptive Self-RAG Studio", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Enterprise retrieval and AI", "audience": "knowledge operations lead", "promise": "Turn retrieval systems into grounded operator tools instead of generic chat demos.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "87%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the knowledge operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "orbital-grid", "theme": {"bg": "#04070d", "surface": "#0d1320", "ink": "#edf4ff", "muted": "#8d9cb7", "accent": "#6ea8ff", "accent2": "#59ffd1"}, "pages_url": "https://r-behera.github.io/adaptive-self-rag-studio/", "api_examples": {"health": {"status": "ok", "project": "adaptive-self-rag-studio"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as knowledge operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
